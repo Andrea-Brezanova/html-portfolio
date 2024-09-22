@@ -1,0 +1,209 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: italic;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  text-align: center; 
+  background-color: rgb(163, 162, 162);
+  margin: 0px;
+  padding: 60px;
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  border-bottom: 2px dotted;
+}
+
+h2 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  border: 0.2px solid rgb(150, 149, 149);
+  border-radius: 4px;
+  box-shadow: 15px 15px 15px grey ;
+}
+
+.container {
+  background-color: lightgrey;
+  padding-bottom: 50px;
+
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 20px 100px;
+}
+
+.about-me {
+  margin-top: 50px;
+}
+
+button {
+  display: block;
+  margin: 30px auto;
+  background: #7D6682;
+  color: white;
+  font-size: 18px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
+  
+}
+
+button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.learn-more {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  text-align: center; 
+  display: block;
+  margin: 0 margin;
+}
+
+.learn-more:hover {
+  transform: scale(1.1);
+  font-size: 18px;
+  padding: 10px 10px;  
+  transition: all 200ms ease-in-out;
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+  border-top: 2px dotted;
+  background-color: lightgrey;
+}
+
+.my-name:hover {
+  color:#7D6682;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+    </style>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <h1>Andrea Brezanova</h1>
+      <div class="container">
+        <h2>This lady here</h2>
+       <img src="../images/me1.jpg" alt="Picture of myself"
+        />
+      </div>
+      <div class="about-me">
+        <p>
+          Andrea Brezanova, born in the heart of Slovakia, grew up surrounded by
+          rolling hills and endless daydreams. As a child, she loved inventing
+          stories in her head, often imagining herself on grand adventures in
+          faraway lands. Her passion for languages blossomed early, and she took
+          with her to the Czech Republic, where she studied English and Spanish
+          with enthusiasm. Not content with just textbooks, Andrea packed her
+          bags and began hopping from country to country, embracing new cultures
+          and turning each foreign city into her playground. Now, as an adult,
+          her life is a colorful mosaic of memories from her global escapades.
+        </p>
+        <p>
+          Her story doesn’t stop at her travels. She continues to believe that
+          learning is a lifelong adventure, and she’s far from done. With a
+          heart full of curiosity and a mind hungry for new challenges, she now
+          dreams of mastering programming and music production. Always eager to
+          expand her horizons, she’s convinced that it's never too late to pick
+          up new skills and share her passions with the next generation. For
+          Andrea, the world is still her playground, and her journey of
+          discovery is only getting started!
+        </p>
+      </div>
+      <a
+        class="learn-more"
+        href="https://de.wikipedia.org/wiki/Tren%C4%8D%C3%ADn"
+        >Learn about my hometown</a
+      >
+      <br />
+      <button class="subscribe-button">Subscribe</button>
+
+      <footer>
+        This page was built by
+        <a class="my-name" href="./MyFiles/andrea.html">Andrea Brezanova</a>
+      </footer>
+    </div>
+    <script>
+      function subscribe() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let emoji = prompt("what is your favorite emoji?");
+        let newText = document.querySelector(".subscribe-button");
+
+        alert("Thank you " + name + "! We'll be in touch by email! " + emoji);
+
+        if (name != "" && email != "") {
+          newText.innerHTML = "Well done! You are subscribed!!";
+        } else {
+          newText.innerHTML = "Try again";
+        }
+      }
+
+      let subscribeButton = document.querySelector(".subscribe-button");
+      subscribeButton.addEventListener("click", subscribe);
+    </script>
+  </body>
+</html>
